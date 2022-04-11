@@ -49,8 +49,8 @@ function App() {
   const removeItem = (index) => {
     let newProducts = [...products];
     let newTotalAmount = totalAmount;
-    newProducts.splice(index, 1);
     newTotalAmount -= newProducts[index].quantity * newProducts[index].price;
+    newProducts.splice(index, 1);
     setProducts(newProducts);
     setTotalAmount(newTotalAmount);
   };
